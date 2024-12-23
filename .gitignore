@@ -1,5 +1,9 @@
+.npmrc
+
 .idea/
-.vscode/
+.vscode/*
+!.vscode/launch.json
+!.vscode/settings.json
 
 cmake-build-*/
 
@@ -15,3 +19,6 @@ test/temp/
 
 /**/**/.DS_Store
 cmake_install.cmake
+
+.cache/
+CMakeFiles/

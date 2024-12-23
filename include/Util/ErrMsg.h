@@ -47,6 +47,7 @@ namespace ErrMsg {
             constexpr const char *get = "FunctionType.get needs to be called with:"
                                         "\n\t - (returnType: Type, isVarArg: boolean)"
                                         "\n\t - (returnType: Type, paramTypes: Type[], isVarArg: boolean)";
+            constexpr const char *getParamType = "FunctionType.getParamType needs to be called with: (i: number)";
         }
         namespace FunctionCallee {
             constexpr const char *constructor = "FunctionCallee.constructor needs to be called with new ()";
@@ -62,6 +63,7 @@ namespace ErrMsg {
             constexpr const char *getTypeByName = "StructType.getTypeByName needs to be called with: (context: LLVMContext, name: string)";
             constexpr const char *setBody = "StructType.setBody needs to be called with (elementTypes: Type[])";
             constexpr const char *setName = "StructType.setName needs to be called with (name: string)";
+            constexpr const char *getElementType = "StructType.getElementType needs to be called with (i: number)";
             constexpr const char *getPointerTo = "StructType.getPointer needs to called with: (addrSpace?: number)";
         }
         namespace ArrayType {
@@ -71,6 +73,7 @@ namespace ErrMsg {
         }
         namespace VectorType {
             constexpr const char *constructor = "VectorType.constructor needs to be called with new (external: Napi::External<llvm::VectorType>)";
+            constexpr const char *get = "VectorType.get needs to be called with (elemType: Type, numElements: number, scalable: boolean)";
         }
         namespace PointerType {
             constexpr const char *constructor = "PointerType.constructor needs to be called with new (external: Napi::External<llvm::PointerType>)";
@@ -536,6 +539,8 @@ namespace ErrMsg {
             constexpr const char *createFunction = "DIBuilder.createFunction needs to be called with: (scope: DIScope, name: string, linkage: string, file: DIFile, line: number, type: DISubroutineType, scopeLine: number, flags: number, spFlags: number)";
             constexpr const char *createLexicalBlock = "DIBuilder.createLexicalBlock needs to be called with: (scope: DIScope, file: DIFile, line: number, column: number)";
             constexpr const char *createBasicType = "DIBuilder.createBasicType needs to be called with (name: string, sizeInBits: number, encoding: number)";
+            constexpr const char *createArrayType = "DIBuilder.createArrayType needs to be called with (size: number, align: number, type: DIType, subscripts: DINode[])";
+            constexpr const char *createStructType = "DIBuilder.createStructType needs to be called with (scope: DIScope, name: string, file: DIFile, lineNumber: number, sizeInBits: number, alignInBits: number, flags: number, derivedFrom: DIType | undefined, elements: DINode[])";
             constexpr const char *getOrCreateTypeArray = "DIBuilder.getOrCreateTypeArray needs to be called with (elements: Metadata[])";
             constexpr const char *createSubroutineType = "DIBuilder.createSubroutineType needs to be called with (paramTypes: DITypeRefArray)";
             constexpr const char *createParameterVariable = "DIBuilder.createParameterVariable needs to be called with (scope: DIScope, name: string, argNo: number, file: DIFile, line: number, type: DIType, alwaysPreserve?: boolean)";
