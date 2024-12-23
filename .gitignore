@@ -5,6 +5,8 @@
 !.vscode/launch.json
 !.vscode/settings.json
 
+.vscode/
+
 cmake-build-*/
 
 build/
